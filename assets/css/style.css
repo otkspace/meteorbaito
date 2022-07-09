@@ -1,0 +1,597 @@
+@charset "UTF-8";
+
+:root {
+  --Navy: #000046;
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-feature-settings: "palt";
+  -webkit-font-feature-settings: "palt";
+  color: var(--Navy);
+  text-align: justify;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+*:focus {
+  outline: none;
+}
+
+/* カラム */
+.pc_clm_5, .tb_clm_5, .sp_clm_5, .clm_5,
+.pc_clm_4, .tb_clm_4, .sp_clm_4, .clm_4,
+.pc_clm_3, .tb_clm_3, .sp_clm_3, .clm_3,
+.pc_clm_2, .tb_clm_2, .sp_clm_2, .clm_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.pc_clm_5 > li, .pc_clm_5 > div, .tb_clm_5 > li, .tb_clm_5 > div, .sp_clm_5 > li, .sp_clm_5 > div, .clm_5 > li, .clm_5 > div,
+.pc_clm_4 > li,
+.pc_clm_4 > div, .tb_clm_4 > li, .tb_clm_4 > div, .sp_clm_4 > li, .sp_clm_4 > div, .clm_4 > li, .clm_4 > div,
+.pc_clm_3 > li,
+.pc_clm_3 > div, .tb_clm_3 > li, .tb_clm_3 > div, .sp_clm_3 > li, .sp_clm_3 > div, .clm_3 > li, .clm_3 > div,
+.pc_clm_2 > li,
+.pc_clm_2 > div, .tb_clm_2 > li, .tb_clm_2 > div, .sp_clm_2 > li, .sp_clm_2 > div, .clm_2 > li, .clm_2 > div {
+  display: block;
+  margin: 0 0 1rem;
+}
+@media screen and (max-width: 767px) {
+  .pc_clm_5 > li, .pc_clm_5 > div, .tb_clm_5 > li, .tb_clm_5 > div, .sp_clm_5 > li, .sp_clm_5 > div, .clm_5 > li, .clm_5 > div,
+  .pc_clm_4 > li,
+  .pc_clm_4 > div, .tb_clm_4 > li, .tb_clm_4 > div, .sp_clm_4 > li, .sp_clm_4 > div, .clm_4 > li, .clm_4 > div,
+  .pc_clm_3 > li,
+  .pc_clm_3 > div, .tb_clm_3 > li, .tb_clm_3 > div, .sp_clm_3 > li, .sp_clm_3 > div, .clm_3 > li, .clm_3 > div,
+  .pc_clm_2 > li,
+  .pc_clm_2 > div, .tb_clm_2 > li, .tb_clm_2 > div, .sp_clm_2 > li, .sp_clm_2 > div, .clm_2 > li, .clm_2 > div {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pc_clm_5 > li h1, .pc_clm_5 > li h2, .pc_clm_5 > li h3, .pc_clm_5 > div h1, .pc_clm_5 > div h2, .pc_clm_5 > div h3, .tb_clm_5 > li h1, .tb_clm_5 > li h2, .tb_clm_5 > li h3, .tb_clm_5 > div h1, .tb_clm_5 > div h2, .tb_clm_5 > div h3, .sp_clm_5 > li h1, .sp_clm_5 > li h2, .sp_clm_5 > li h3, .sp_clm_5 > div h1, .sp_clm_5 > div h2, .sp_clm_5 > div h3, .clm_5 > li h1, .clm_5 > li h2, .clm_5 > li h3, .clm_5 > div h1, .clm_5 > div h2, .clm_5 > div h3,
+  .pc_clm_4 > li h1,
+  .pc_clm_4 > li h2,
+  .pc_clm_4 > li h3,
+  .pc_clm_4 > div h1,
+  .pc_clm_4 > div h2,
+  .pc_clm_4 > div h3, .tb_clm_4 > li h1, .tb_clm_4 > li h2, .tb_clm_4 > li h3, .tb_clm_4 > div h1, .tb_clm_4 > div h2, .tb_clm_4 > div h3, .sp_clm_4 > li h1, .sp_clm_4 > li h2, .sp_clm_4 > li h3, .sp_clm_4 > div h1, .sp_clm_4 > div h2, .sp_clm_4 > div h3, .clm_4 > li h1, .clm_4 > li h2, .clm_4 > li h3, .clm_4 > div h1, .clm_4 > div h2, .clm_4 > div h3,
+  .pc_clm_3 > li h1,
+  .pc_clm_3 > li h2,
+  .pc_clm_3 > li h3,
+  .pc_clm_3 > div h1,
+  .pc_clm_3 > div h2,
+  .pc_clm_3 > div h3, .tb_clm_3 > li h1, .tb_clm_3 > li h2, .tb_clm_3 > li h3, .tb_clm_3 > div h1, .tb_clm_3 > div h2, .tb_clm_3 > div h3, .sp_clm_3 > li h1, .sp_clm_3 > li h2, .sp_clm_3 > li h3, .sp_clm_3 > div h1, .sp_clm_3 > div h2, .sp_clm_3 > div h3, .clm_3 > li h1, .clm_3 > li h2, .clm_3 > li h3, .clm_3 > div h1, .clm_3 > div h2, .clm_3 > div h3,
+  .pc_clm_2 > li h1,
+  .pc_clm_2 > li h2,
+  .pc_clm_2 > li h3,
+  .pc_clm_2 > div h1,
+  .pc_clm_2 > div h2,
+  .pc_clm_2 > div h3, .tb_clm_2 > li h1, .tb_clm_2 > li h2, .tb_clm_2 > li h3, .tb_clm_2 > div h1, .tb_clm_2 > div h2, .tb_clm_2 > div h3, .sp_clm_2 > li h1, .sp_clm_2 > li h2, .sp_clm_2 > li h3, .sp_clm_2 > div h1, .sp_clm_2 > div h2, .sp_clm_2 > div h3, .clm_2 > li h1, .clm_2 > li h2, .clm_2 > li h3, .clm_2 > div h1, .clm_2 > div h2, .clm_2 > div h3 {
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    margin-bottom: 0.5rem;
+  }
+}
+
+.pc_clm_5 > li, .pc_clm_5 > div, .clm_5 > li, .clm_5 > div {
+  width: calc(20% - 2rem);
+}
+
+.pc_clm_4 > li, .pc_clm_4 > div, .clm_4 > li, .clm_4 > div {
+  width: calc(25% - 2rem);
+}
+
+.pc_clm_3 > li, .pc_clm_3 > div, .clm_3 > li, .clm_3 > div {
+  width: calc(33% - 2rem);
+}
+
+.pc_clm_2 > li, .pc_clm_2 > div, .clm_2 > li, .clm_2 > div {
+  width: calc(50% - 2rem);
+}
+
+.pc_clm_1 > li, .pc_clm_1 > div, .clm_1 > li, .clm_1 > div {
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .tb_clm_5 > li, .tb_clm_5 > div {
+    width: calc(20% - 0.5rem);
+  }
+
+  .tb_clm_4 > li, .tb_clm_4 > div {
+    width: calc(25% - 0.5rem);
+  }
+
+  .tb_clm_3 > li, .tb_clm_3 > div {
+    width: calc(33% - 0.5rem);
+  }
+
+  .tb_clm_2 > li, .tb_clm_2 > div {
+    width: calc(50% - 0.5rem);
+  }
+
+  .tb_clm_1 > li, .tb_clm_1 > div {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sp_clm_5 > li, .sp_clm_5 > div {
+    width: calc(20% - 0.5rem);
+  }
+
+  .sp_clm_4 > li, .sp_clm_4 > div {
+    width: calc(25% - 0.5rem);
+  }
+
+  .sp_clm_3 > li, .sp_clm_3 > div {
+    width: calc(33% - 0.5rem);
+  }
+
+  .sp_clm_2 > li, .sp_clm_2 > div {
+    width: calc(50% - 0.5rem);
+  }
+
+  .sp_clm_1 > li, .sp_clm_1 > div {
+    width: 100%;
+  }
+}
+.clm_card > li, .clm_card > div {
+  background: var(--llPurple);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  line-height: 150%;
+}
+
+button, .linkbtn {
+  display: inline-block;
+  background: red;
+  color: #fff;
+  margin: 0.5rem auto;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  text-align: center;
+  line-height: 130%;
+  border-bottom: solid 5px #191642;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+button:hover, .linkbtn:hover {
+  background: var(--Navy);
+  border: solid 1px var(--Navy);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+button:active, .linkbtn:active {
+  background: var(--Pink);
+}
+button[download]:before, .linkbtn[download]:before {
+  display: none;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+}
+
+/* 小技 */
+.txtS {
+  font-size: 80%;
+}
+
+.tac {
+  text-align: center;
+}
+
+.smallTxt {
+  line-height: 140%;
+}
+small {
+  font-size: 85%;
+}
+
+@media screen and (max-width: 960px) {
+  .pc {
+    display: none;
+  }
+}
+@media screen and (min-width: 960px) {
+  .sp {
+    display: none;
+  }
+}
+
+main {
+  margin: auto;
+  width: clamp(150px, 90%, 1000px);
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  line-height: 170%;
+  padding-top: clamp(1rem, 6vw, 3rem);
+  padding-bottom: clamp(3rem, 7vw, 4rem);
+}
+main * {
+  max-width: 100%;
+  margin: auto;
+}
+
+main header {
+  margin: 0 auto 1rem;
+}
+main figure {
+  margin: 0 auto 1rem;
+}
+@media screen and (max-width: 960px) {
+  main figure {
+    text-align: center;
+  }
+}
+main figure img {
+  width: 100%;
+}
+main figure img + img {
+  margin-top: clamp(2rem, 5vw, 3rem);
+}
+main figcaption {
+  line-height: 200%;
+  padding: 2rem 3rem;
+  border-radius: 30px;
+  margin: 2rem 0 3rem;
+}
+@media screen and (max-width: 960px) {
+  main figcaption {
+    width: 90%;
+    margin: 1.5rem auto 2rem;
+    padding: 1.25rem 1.25rem;
+    line-height: 170%;
+    border-radius: 20px;
+  }
+}
+main figcaption small {
+  display: inline-block;
+  line-height: 170%;
+  margin: 0.8rem 0;
+}
+main .pc_clm_5 figcaption, main .pc_clm_4 figcaption, main .tb_clm_5 figcaption, main .tb_clm_4 figcaption, main .sp_clm_5 figcaption, main .sp_clm_4 figcaption {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin: 1rem 0 2rem;
+}
+main a {
+  color: #2401A2;
+  border-bottom: dotted 1px;
+}
+main h1 {
+  font-size: clamp(1.8rem, 4.7vw, 2.5rem);
+  padding: 0.5rem 0rem;
+  margin: clamp(1.5rem, 5vw, 3rem) auto 1rem;
+}
+main h2 {
+  font-size: clamp(1.6rem, 4.5vw, 2.3rem);
+  padding: 0.5rem 0rem;
+  margin: 2rem auto 1rem;
+}
+@media screen and (max-width: 767px) {
+  main h2 {
+    margin: 1rem auto 0.5rem;
+  }
+}
+main h4 {
+  font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+  margin: 2rem auto 1rem;
+}
+main section:not(:last-child) {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+main p {
+  margin-bottom: 1rem;
+}
+main iframe {
+  display: block;
+  margin: 1rem auto;
+}
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ヘッダー */
+#siteHeader {
+  padding: 0.5rem;
+  border-bottom: 1px solid red;
+}
+#siteHeaderInner {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: clamp(150px, 90%, 1000px);
+}
+#siteHeaderLogo img {
+  width: clamp(70px, 20vw, 200px);
+}
+#siteHeader h1 img {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+#wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* グローバルナビ  */
+#globalNav ul {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+
+
+
+.svg-inline--fa {
+  margin-right: 0.5rem;
+}
+@media screen and (max-width: 500px) {
+  .svg-inline--fa {
+    margin-right: 0.2rem;
+  }
+}
+
+strong, b {
+  color: red;
+}
+
+/* メイン画像 */
+.mainImg img {
+  display: block;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 20px;
+  box-shadow: 7px 7px rgba(255,0,0,1);
+}
+
+/* 仕事ヘッダー */
+#jobHeader h2 {
+  font-size: clamp(1.4rem, 4.5vw, 2.1rem);
+  line-height: 150%;
+  margin: 0.8rem 0;
+  padding: 0;
+}
+#jobHeader .company {
+  color: red;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#jobHeader .new {
+  color: red;
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+/* 仕事属性タグ */
+ul.jobTag {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  text-align: left;
+  margin-top: clamp(1rem, 2vw, 1.5rem);
+}
+ul.jobTag li {
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  text-decoration: none;
+  margin: 0 0.5rem 0.5rem 0;
+  border: 1px solid red;
+  border-radius: 20px;
+  padding: 0.3rem 0.5rem;
+  line-height: 100%;
+  background: red;
+  color: #fff;
+}
+
+/* 表 */
+.jobDesc {
+  display: flex;
+}
+.jobDesc ul {
+  width: 47%;
+}
+.jobDesc ul li {
+  display: flex;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  color: var(--Navy);
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  letter-spacing: 1px;
+  line-height: 150%;
+}
+.jobDesc .head {
+  color: red;
+  font-weight: bold;
+  width: 20%;
+}
+.jobDesc .cont {
+  width: 75%;
+}
+@media screen and (max-width: 960px) {
+  .jobDesc {
+    flex-direction: column;
+  }
+  .jobDesc ul {
+    width: 100%;
+  }
+  .jobDesc .head {
+    width: 27%;
+  }
+  .jobDesc .cont {
+    width: 73%;
+  }
+}
+
+.ouboLimit {
+  background: #eee;
+  border: 2px solid red;
+  padding: 1.5rem 1rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+.ouboLimit .desc {
+  margin: 1rem 0 0;
+}
+
+/* 仕事内容 */
+.jobinfo {
+  letter-spacing: 1px;
+}
+
+.jobinfo h3 {
+  font-size: clamp(1.3rem, 4.2vw, 1.7rem);
+  background: red;
+  padding: 12px 0;
+  text-align: center;
+  margin: 1rem 0;
+  color: #FFF;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+.jobinfo h4 {
+  color: red;
+  font-weight: bold;
+  padding-bottom: 5px;
+  border-bottom: 1px solid red;
+  letter-spacing: 1px;
+}
+
+.jobinfoInner {
+  display: flex;
+}
+.jobInfoInner > .txt {
+  width: 100%;
+}
+.jobinfoInner > figure {
+  width: 35%;
+}
+
+@media screen and (max-width: 960px) {
+  .jobinfoInner {
+    flex-direction: column-reverse;
+  }
+  .jobInfoInner > .txt {
+    width: 100%;
+  }
+  .jobinfoInner > figure {
+    width: 100%;
+  }
+}
+
+.bigVoice {
+  text-align: center;
+  font-size: clamp(1.1rem, 4.5vw, 1.7rem);
+  font-weight: bold;
+  margin: clamp(1rem, 5vw, 3rem) 0;
+  color:  red;
+}
+
+/* フッター */
+#siteFooter {
+  margin-top: auto;
+  display: block;
+  text-align: center;
+  padding: 1.25rem 5%;
+  background: #eee;
+}
+#siteFooterLogo img {
+  width: clamp(70px, 20vw, 200px);
+}
+#siteFooter nav {
+  display: inline-block;
+  margin: 1.5rem auto 0;
+}
+#siteFooter nav ul {
+  width: 100%;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;  
+  margin: auto;
+  text-align: center;
+  font-size: 0.9rem;
+}
+#siteFooter nav ul li:after {
+  display: inline-block;
+  content: " ｜ ";
+  padding: 0 0.5rem;
+}
+#siteFooter nav ul li:last-child:after {
+  content: "";
+}
+
+@media screen and (max-width: 960px) {
+  #siteFooter {
+    padding: 1.25rem 0;
+  }
+  #siteFooter nav {
+    width:  100%;
+    margin: 1.5rem auto 0;
+  }
+  #siteFooter nav ul {
+    text-align: left;
+    background: #eee;
+  }
+  #siteFooter nav ul li {
+    width: 50%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  #siteFooter nav ul li:after {
+    content: "＞" !important;
+    padding: 0 0.5rem;
+    color: red;
+  }
+  #siteFooter nav ul li a {
+  }
+}
+
+#siteFooter .note {
+  margin-top: 2rem;
+}
+#siteFooter .note small {
+  font-size: 0.8rem;
+}
