@@ -25,155 +25,41 @@ html {
   outline: none;
 }
 
-/* カラム */
-.pc_clm_5, .tb_clm_5, .sp_clm_5, .clm_5,
-.pc_clm_4, .tb_clm_4, .sp_clm_4, .clm_4,
-.pc_clm_3, .tb_clm_3, .sp_clm_3, .clm_3,
-.pc_clm_2, .tb_clm_2, .sp_clm_2, .clm_2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-.pc_clm_5 > li, .pc_clm_5 > div, .tb_clm_5 > li, .tb_clm_5 > div, .sp_clm_5 > li, .sp_clm_5 > div, .clm_5 > li, .clm_5 > div,
-.pc_clm_4 > li,
-.pc_clm_4 > div, .tb_clm_4 > li, .tb_clm_4 > div, .sp_clm_4 > li, .sp_clm_4 > div, .clm_4 > li, .clm_4 > div,
-.pc_clm_3 > li,
-.pc_clm_3 > div, .tb_clm_3 > li, .tb_clm_3 > div, .sp_clm_3 > li, .sp_clm_3 > div, .clm_3 > li, .clm_3 > div,
-.pc_clm_2 > li,
-.pc_clm_2 > div, .tb_clm_2 > li, .tb_clm_2 > div, .sp_clm_2 > li, .sp_clm_2 > div, .clm_2 > li, .clm_2 > div {
-  display: block;
-  margin: 0 0 1rem;
-}
-@media screen and (max-width: 767px) {
-  .pc_clm_5 > li, .pc_clm_5 > div, .tb_clm_5 > li, .tb_clm_5 > div, .sp_clm_5 > li, .sp_clm_5 > div, .clm_5 > li, .clm_5 > div,
-  .pc_clm_4 > li,
-  .pc_clm_4 > div, .tb_clm_4 > li, .tb_clm_4 > div, .sp_clm_4 > li, .sp_clm_4 > div, .clm_4 > li, .clm_4 > div,
-  .pc_clm_3 > li,
-  .pc_clm_3 > div, .tb_clm_3 > li, .tb_clm_3 > div, .sp_clm_3 > li, .sp_clm_3 > div, .clm_3 > li, .clm_3 > div,
-  .pc_clm_2 > li,
-  .pc_clm_2 > div, .tb_clm_2 > li, .tb_clm_2 > div, .sp_clm_2 > li, .sp_clm_2 > div, .clm_2 > li, .clm_2 > div {
-    max-width: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .pc_clm_5 > li h1, .pc_clm_5 > li h2, .pc_clm_5 > li h3, .pc_clm_5 > div h1, .pc_clm_5 > div h2, .pc_clm_5 > div h3, .tb_clm_5 > li h1, .tb_clm_5 > li h2, .tb_clm_5 > li h3, .tb_clm_5 > div h1, .tb_clm_5 > div h2, .tb_clm_5 > div h3, .sp_clm_5 > li h1, .sp_clm_5 > li h2, .sp_clm_5 > li h3, .sp_clm_5 > div h1, .sp_clm_5 > div h2, .sp_clm_5 > div h3, .clm_5 > li h1, .clm_5 > li h2, .clm_5 > li h3, .clm_5 > div h1, .clm_5 > div h2, .clm_5 > div h3,
-  .pc_clm_4 > li h1,
-  .pc_clm_4 > li h2,
-  .pc_clm_4 > li h3,
-  .pc_clm_4 > div h1,
-  .pc_clm_4 > div h2,
-  .pc_clm_4 > div h3, .tb_clm_4 > li h1, .tb_clm_4 > li h2, .tb_clm_4 > li h3, .tb_clm_4 > div h1, .tb_clm_4 > div h2, .tb_clm_4 > div h3, .sp_clm_4 > li h1, .sp_clm_4 > li h2, .sp_clm_4 > li h3, .sp_clm_4 > div h1, .sp_clm_4 > div h2, .sp_clm_4 > div h3, .clm_4 > li h1, .clm_4 > li h2, .clm_4 > li h3, .clm_4 > div h1, .clm_4 > div h2, .clm_4 > div h3,
-  .pc_clm_3 > li h1,
-  .pc_clm_3 > li h2,
-  .pc_clm_3 > li h3,
-  .pc_clm_3 > div h1,
-  .pc_clm_3 > div h2,
-  .pc_clm_3 > div h3, .tb_clm_3 > li h1, .tb_clm_3 > li h2, .tb_clm_3 > li h3, .tb_clm_3 > div h1, .tb_clm_3 > div h2, .tb_clm_3 > div h3, .sp_clm_3 > li h1, .sp_clm_3 > li h2, .sp_clm_3 > li h3, .sp_clm_3 > div h1, .sp_clm_3 > div h2, .sp_clm_3 > div h3, .clm_3 > li h1, .clm_3 > li h2, .clm_3 > li h3, .clm_3 > div h1, .clm_3 > div h2, .clm_3 > div h3,
-  .pc_clm_2 > li h1,
-  .pc_clm_2 > li h2,
-  .pc_clm_2 > li h3,
-  .pc_clm_2 > div h1,
-  .pc_clm_2 > div h2,
-  .pc_clm_2 > div h3, .tb_clm_2 > li h1, .tb_clm_2 > li h2, .tb_clm_2 > li h3, .tb_clm_2 > div h1, .tb_clm_2 > div h2, .tb_clm_2 > div h3, .sp_clm_2 > li h1, .sp_clm_2 > li h2, .sp_clm_2 > li h3, .sp_clm_2 > div h1, .sp_clm_2 > div h2, .sp_clm_2 > div h3, .clm_2 > li h1, .clm_2 > li h2, .clm_2 > li h3, .clm_2 > div h1, .clm_2 > div h2, .clm_2 > div h3 {
-    font-size: clamp(1.5rem, 3vw, 1.8rem);
-    margin-bottom: 0.5rem;
-  }
-}
-
-.pc_clm_5 > li, .pc_clm_5 > div, .clm_5 > li, .clm_5 > div {
-  width: calc(20% - 2rem);
-}
-
-.pc_clm_4 > li, .pc_clm_4 > div, .clm_4 > li, .clm_4 > div {
-  width: calc(25% - 2rem);
-}
-
-.pc_clm_3 > li, .pc_clm_3 > div, .clm_3 > li, .clm_3 > div {
-  width: calc(33% - 2rem);
-}
-
-.pc_clm_2 > li, .pc_clm_2 > div, .clm_2 > li, .clm_2 > div {
-  width: calc(50% - 2rem);
-}
-
-.pc_clm_1 > li, .pc_clm_1 > div, .clm_1 > li, .clm_1 > div {
-  width: 100%;
-}
-
-@media screen and (max-width: 960px) {
-  .tb_clm_5 > li, .tb_clm_5 > div {
-    width: calc(20% - 0.5rem);
-  }
-
-  .tb_clm_4 > li, .tb_clm_4 > div {
-    width: calc(25% - 0.5rem);
-  }
-
-  .tb_clm_3 > li, .tb_clm_3 > div {
-    width: calc(33% - 0.5rem);
-  }
-
-  .tb_clm_2 > li, .tb_clm_2 > div {
-    width: calc(50% - 0.5rem);
-  }
-
-  .tb_clm_1 > li, .tb_clm_1 > div {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .sp_clm_5 > li, .sp_clm_5 > div {
-    width: calc(20% - 0.5rem);
-  }
-
-  .sp_clm_4 > li, .sp_clm_4 > div {
-    width: calc(25% - 0.5rem);
-  }
-
-  .sp_clm_3 > li, .sp_clm_3 > div {
-    width: calc(33% - 0.5rem);
-  }
-
-  .sp_clm_2 > li, .sp_clm_2 > div {
-    width: calc(50% - 0.5rem);
-  }
-
-  .sp_clm_1 > li, .sp_clm_1 > div {
-    width: 100%;
-  }
-}
-.clm_card > li, .clm_card > div {
-  background: var(--llPurple);
-  border-radius: 20px;
-  padding: 1rem;
-}
-
 h1, h2, h3 {
   font-weight: bold;
   line-height: 150%;
 }
 
-button, .linkbtn {
+button {
   display: inline-block;
   background: red;
   color: #fff;
   margin: 0.5rem auto;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 2rem;
   border-radius: 3rem;
+  font-weight: bold;
   text-decoration: none;
   text-align: center;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
   line-height: 130%;
   border-bottom: solid 5px #191642;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+  letter-spacing: 3px;
+}
+button.keepBtn {
+  background: #00ade2;
+}
+button img {
+  max-height: 45px;
+}
+button a {
+  color: #fff !important;
+  text-decoration: none;
+  border: none;
 }
 button:hover, .linkbtn:hover {
-  background: var(--Navy);
+  background: red;
   border: solid 1px var(--Navy);
   -webkit-transition: 0.1s;
   transition: 0.1s;
@@ -270,10 +156,6 @@ main .pc_clm_5 figcaption, main .pc_clm_4 figcaption, main .tb_clm_5 figcaption,
   border-radius: 20px;
   margin: 1rem 0 2rem;
 }
-main a {
-  color: #2401A2;
-  border-bottom: dotted 1px;
-}
 main h1 {
   font-size: clamp(1.8rem, 4.7vw, 2.5rem);
   padding: 0.5rem 0rem;
@@ -328,6 +210,28 @@ main img {
   margin-right: 0.25rem;
   margin-top: 0.5rem;
 }
+#siteHeader .keepBtn {
+  padding: 0.2rem 1.2rem;
+  margin-right: 1rem;
+}
+#siteHeader .keepBtn img {
+  max-height: 28px;
+}
+#siteHeaderLinks {
+  display: flex;
+}
+#siteHeaderLinks ul {
+  display: flex;
+  margin-top:  1rem;
+}
+#siteHeaderLinks ul li+li {
+  margin-left: 1rem;
+}
+#siteHeaderLinks ul li a {
+  border-bottom: 1px solid #00ade2;
+  padding: 0;
+  color: #00ade2;
+}
 
 #wrapper {
   width: 100%;
@@ -340,24 +244,6 @@ main img {
   flex-direction: column;
   min-height: 100vh;
 }
-
-/* グローバルナビ  */
-#globalNav ul {
-  width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-
-
 
 .svg-inline--fa {
   margin-right: 0.5rem;
@@ -376,7 +262,7 @@ strong, b {
 .mainImg img {
   display: block;
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 2rem auto 3rem;
   border-radius: 20px;
   box-shadow: 7px 7px rgba(255,0,0,1);
 }
@@ -423,10 +309,18 @@ ul.jobTag li {
 
 /* 表 */
 .jobDesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .jobDesc ul {
-  width: 47%;
+  width: 49%;
+  margin: 0;
 }
 .jobDesc ul li {
   display: flex;
@@ -463,12 +357,38 @@ ul.jobTag li {
 .ouboLimit {
   background: #eee;
   border: 2px solid red;
-  padding: 1.5rem 1rem;
+  padding: 2rem 1rem 1.8rem;
   margin: 1rem auto;
   text-align: center;
 }
+.ouboLimit ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.ouboLimit ul li {
+   margin: 0;
+}
+.ouboLimit ul li:first-child {
+  margin-right: 1.5rem;
+}
 .ouboLimit .desc {
-  margin: 1rem 0 0;
+  margin: 1.5rem 0 0;
+}
+.ouboLimit .desc p {
+  margin: 0;
+}
+.ouboLimit .desc p:first-child {
+  font-size: clamp(1.3rem, 3vw, 1.5rem);
+  letter-spacing: 2px;
+  font-weight:  bold;
+  margin-bottom: 0.5rem;
+}
+.ouboLimit .desc p:first-child strong {
+  font-size: clamp(1.6rem, 3vw, 2rem);  
 }
 
 /* 仕事内容 */
