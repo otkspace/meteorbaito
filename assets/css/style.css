@@ -201,8 +201,8 @@ main img {
 }
 #siteHeader .keepBtn a {
   margin-top: 0;
-  padding: 0.25rem 1.25rem;
-  box-shadow: 0px 7px #0082CC;
+  padding: 0.15rem 0.9rem;
+  box-shadow: 0px 6px #0082CC;
 }
 #siteHeader .keepBtn a:hover {
   box-shadow: none;
@@ -215,7 +215,7 @@ main img {
 }
 #siteHeaderLinks ul {
   display: flex;
-  margin-top:  1rem;
+  margin: auto 0;
 }
 #siteHeaderLinks ul li+li {
   margin-left: 1rem;
