@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 :root {
+  --Blue: #00ade2;
   --Navy: #000046;
 }
 
@@ -29,58 +30,51 @@ h1, h2, h3 {
   font-weight: bold;
   line-height: 150%;
 }
-
 button {
+  border-radius: 5rem;
+}
+button a {
   display: inline-block;
   background: red;
   color: #fff;
   margin: 0.5rem auto;
   padding: 0.5rem 2rem;
-  border-radius: 3rem;
+  border-radius: 200vh;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
   font-size: clamp(1.1rem, 3vw, 1.4rem);
   line-height: 130%;
-  border-bottom: solid 5px #191642;
+  box-shadow: 0px 8px #C1272D;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   cursor: pointer;
   letter-spacing: 3px;
 }
-button.keepBtn {
+button.keepBtn a {
   background: #00ade2;
+  box-shadow: 0px 8px #0082CC;
 }
 button img {
   max-height: 45px;
 }
-button a {
-  color: #fff !important;
-  text-decoration: none;
-  border: none;
-}
-button:hover, .linkbtn:hover {
-  background: red;
-  border: solid 1px var(--Navy);
+a:hover {
+  opacity: 0.5;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
-button:active, .linkbtn:active {
-  background: var(--Pink);
+button a:hover,
+.fixedButton a:hover {
+  opacity: 1;
 }
-button[download]:before, .linkbtn[download]:before {
-  display: none;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
-}
-
-/* 小技 */
-.txtS {
-  font-size: 80%;
+button a:hover {
+  box-shadow: none;
+  transform: scale(0.99, 0.99) translateY(5px);
 }
 
-.tac {
-  text-align: center;
+@media screen and (max-width: 767px) {
+  button img {
+    max-height: 35px;
+  }
 }
 
 .smallTxt {
@@ -90,12 +84,12 @@ small {
   font-size: 85%;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 767px) {
   .pc {
     display: none;
   }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 768px) {
   .sp {
     display: none;
   }
@@ -107,7 +101,7 @@ main {
   font-size: clamp(0.95rem, 3vw, 1.1rem);
   line-height: 170%;
   padding-top: clamp(1rem, 6vw, 3rem);
-  padding-bottom: clamp(3rem, 7vw, 4rem);
+  padding-bottom: clamp(2rem, 7vw, 4rem);
 }
 main * {
   max-width: 100%;
@@ -120,7 +114,7 @@ main header {
 main figure {
   margin: 0 auto 1rem;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 767px) {
   main figure {
     text-align: center;
   }
@@ -137,7 +131,7 @@ main figcaption {
   border-radius: 30px;
   margin: 2rem 0 3rem;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 767px) {
   main figcaption {
     width: 90%;
     margin: 1.5rem auto 2rem;
@@ -145,16 +139,6 @@ main figcaption {
     line-height: 170%;
     border-radius: 20px;
   }
-}
-main figcaption small {
-  display: inline-block;
-  line-height: 170%;
-  margin: 0.8rem 0;
-}
-main .pc_clm_5 figcaption, main .pc_clm_4 figcaption, main .tb_clm_5 figcaption, main .tb_clm_4 figcaption, main .sp_clm_5 figcaption, main .sp_clm_4 figcaption {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  margin: 1rem 0 2rem;
 }
 main h1 {
   font-size: clamp(1.8rem, 4.7vw, 2.5rem);
@@ -189,30 +173,39 @@ main img {
   max-width: 100%;
   height: auto;
 }
+#wrapper a {
+  color: var(--Blue);
+}
 
 /* ヘッダー */
 #siteHeader {
-  padding: 0.5rem;
+  padding: 0.7rem 0;
   border-bottom: 1px solid red;
 }
 #siteHeaderInner {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  width: clamp(150px, 90%, 1000px);
+  width: clamp(200px, 90%, 1000px);
+}
+#siteHeaderLogo {
+  margin: auto 0;
 }
 #siteHeaderLogo img {
-  width: clamp(70px, 20vw, 200px);
-}
-#siteHeader h1 img {
+  max-width: 200px;
   vertical-align: middle;
   display: inline-block;
-  margin-right: 0.25rem;
-  margin-top: 0.5rem;
 }
 #siteHeader .keepBtn {
-  padding: 0.2rem 1.2rem;
-  margin-right: 1rem;
+  margin-right: 1.1rem;
+}
+#siteHeader .keepBtn a {
+  margin-top: 0;
+  padding: 0.25rem 1.25rem;
+  box-shadow: 0px 7px #0082CC;
+}
+#siteHeader .keepBtn a:hover {
+  box-shadow: none;
 }
 #siteHeader .keepBtn img {
   max-height: 28px;
@@ -231,6 +224,19 @@ main img {
   border-bottom: 1px solid #00ade2;
   padding: 0;
   color: #00ade2;
+}
+
+@media screen and (max-width: 767px) {
+  #siteHeaderLogo img {
+    width: clamp(120px, 11vw, 300px);
+  }
+  #siteHeaderLinks ul {
+    margin: auto 0;
+    font-size: 0.8rem;
+  }
+  #siteHeader .keepBtn {
+    display: none;
+  }
 }
 
 #wrapper {
@@ -268,10 +274,17 @@ strong, b {
 }
 
 /* 仕事ヘッダー */
+#jobHeader .new {
+  color: red;
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
 #jobHeader h2 {
-  font-size: clamp(1.4rem, 4.5vw, 2.1rem);
+  font-size: clamp(1.3rem, 4.5vw, 2.1rem);
   line-height: 150%;
-  margin: 0.8rem 0;
+  margin: 0.4rem 0 0 0 ;
   padding: 0;
 }
 #jobHeader .company {
@@ -279,12 +292,7 @@ strong, b {
   font-size: clamp(1.1rem, 3vw, 1.5rem);
   font-weight: bold;
   letter-spacing: 1px;
-}
-#jobHeader .new {
-  color: red;
-  font-weight: bold;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
+  margin: 0.8rem 0 0 0 ;
 }
 
 /* 仕事属性タグ */
@@ -339,7 +347,7 @@ ul.jobTag li {
 .jobDesc .cont {
   width: 75%;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 767px) {
   .jobDesc {
     flex-direction: column;
   }
@@ -354,6 +362,7 @@ ul.jobTag li {
   }
 }
 
+/* 募集期限 */
 .ouboLimit {
   background: #eee;
   border: 2px solid red;
@@ -370,7 +379,7 @@ ul.jobTag li {
   flex-wrap: wrap;
 }
 .ouboLimit ul li {
-   margin: 0;
+ margin: 0;
 }
 .ouboLimit ul li:first-child {
   margin-right: 1.5rem;
@@ -382,7 +391,7 @@ ul.jobTag li {
   margin: 0;
 }
 .ouboLimit .desc p:first-child {
-  font-size: clamp(1.3rem, 3vw, 1.5rem);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   letter-spacing: 2px;
   font-weight:  bold;
   margin-bottom: 0.5rem;
@@ -390,28 +399,83 @@ ul.jobTag li {
 .ouboLimit .desc p:first-child strong {
   font-size: clamp(1.6rem, 3vw, 2rem);  
 }
+.fixedButton {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .ouboLimit ul li:first-child {
+    margin: 0 0 1rem 0;
+  }
+  .ouboLimit .desc {
+    margin: 1.3rem 0 0;
+  }
+  .ouboLimit .desc p:first-child {
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+  }
+  .fixedButton {
+    display: block;
+    position: fixed;
+    width:  100%;
+    bottom:  0;
+    left:  0;
+    right: 0;
+  }
+  .fixedButton ul {
+    width:  100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .fixedButton li a {
+    display: block;
+    padding: 0.7rem 0;
+    width: 100%;
+    height: 100%;
+  }
+  .fixedButton li img {
+    max-height: 30px;
+  }
+  .fixedButton li:first-child {
+    width: 60%;
+  }
+  .fixedButton li:last-child {
+    width: 40%;
+  }
+  .fixedButton li:first-child a {
+    background: red;
+  }
+  .fixedButton li:last-child a {
+    background: var(--Blue);
+  }
+}
 
 /* 仕事内容 */
 .jobinfo {
   letter-spacing: 1px;
 }
 
+.jobinfo h3, h4 {
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
 .jobinfo h3 {
   font-size: clamp(1.3rem, 4.2vw, 1.7rem);
-  background: red;
   padding: 12px 0;
-  text-align: center;
   margin: 1rem 0;
-  color: #FFF;
-  border-radius: 10px;
-  letter-spacing: 1px;
+  background: red;
+  color: #fff;
+  border-radius: 5px;
 }
 .jobinfo h4 {
   color: red;
-  font-weight: bold;
-  padding-bottom: 5px;
   border-bottom: 1px solid red;
-  letter-spacing: 1px;
+  padding-bottom: 5px;  
 }
 
 .jobinfoInner {
@@ -422,9 +486,13 @@ ul.jobTag li {
 }
 .jobinfoInner > figure {
   width: 35%;
+  max-width: 450px;
+}
+.jobinfoInner > figure img {
+  border-radius: 20px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 767px) {
   .jobinfoInner {
     flex-direction: column-reverse;
   }
@@ -453,7 +521,7 @@ ul.jobTag li {
   background: #eee;
 }
 #siteFooterLogo img {
-  width: clamp(70px, 20vw, 200px);
+  width: clamp(150px, 2vw, 200px);
 }
 #siteFooter nav {
   display: inline-block;
@@ -483,27 +551,30 @@ ul.jobTag li {
   content: "";
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 767px) {
   #siteFooter {
-    padding: 1.25rem 0;
+    padding: 1.25rem 0 5rem;
   }
   #siteFooter nav {
     width:  100%;
-    margin: 1.5rem auto 0;
+    margin: 1rem auto 0;
   }
   #siteFooter nav ul {
     text-align: left;
     background: #eee;
+    font-size: 0.8rem;
   }
   #siteFooter nav ul li {
     width: 50%;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
     border-bottom: 1px solid #ccc;
   }
+  #siteFooter nav ul li:nth-child(odd) {
+    padding-left: 5%;
+  }
   #siteFooter nav ul li:after {
-    content: "＞" !important;
+    content: "" !important;
     padding: 0 0.5rem;
-    color: red;
   }
   #siteFooter nav ul li a {
   }
