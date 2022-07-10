@@ -67,7 +67,7 @@ button a:hover,
   opacity: 1;
 }
 button a:hover {
-  box-shadow: none;
+  box-shadow: none !important;
   transform: scale(0.99, 0.99) translateY(5px);
 }
 
